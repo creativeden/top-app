@@ -1,7 +1,6 @@
 import { Metadata } from 'next'
 import './globals.css'
 import { Noto_Sans } from 'next/font/google'
-import { Layout } from '@/layout/Layout'
 
 const noto_sans = Noto_Sans({ subsets: ['latin'] })
 
@@ -18,9 +17,7 @@ export default function RootLayout({
     return (
     <html lang="en">
         <body className={noto_sans.className}>
-            <Layout>
-                {children}
-            </Layout>
+            {children}
         </body>
     </html>
     )
