@@ -1,11 +1,10 @@
-'use client'
+import { Button, Htag, P, Rating, Tag } from "@/components"
+import { withLayout } from "@/layout/Layout"
+import { useState } from "react"
+import { Menu } from "./components/menu"
 
-import { Button, Htag, P, Rating, Tag } from "@/components";
-import { withLayout } from "@/layout/Layout";
-import { useState } from "react";
-
-export function Home(): JSX.Element {
-    const [rating, setRating] = useState<number>(4)
+export async function Home() {
+    // const [rating, setRating] = useState<number>(4)
     return (
         <>
             <Htag tag='h1'>Text title</Htag>
@@ -18,7 +17,9 @@ export function Home(): JSX.Element {
             <Tag size='m' color='red'>Red</Tag>
             <Tag size='s' color='green'>Green</Tag>
             <Tag color='primary'>Primary</Tag>
-            <Rating rating={rating} isEditable setRating={setRating} />
+            {/* <Rating rating={rating} isEditable setRating={setRating} /> */}
+
+            <Menu />
         </>
     )
 }
