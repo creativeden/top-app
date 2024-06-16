@@ -9,7 +9,7 @@ export async function getMenu(firstCategory: number): Promise<MenuItem[]> {
 		}),
 		headers: new Headers({ 'content-type': 'application/json' }),
 		next: { revalidate: 10 }
-	});
-	console.log('revalidating getMenu');
-	return res.json();
+	})
+	console.log('revalidating getMenu')
+	return res.json()
 }
